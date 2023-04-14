@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.fondo{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	z-index: -1;
+	background: radial-gradient(circle at 50% 50%,
+				transparent 0,
+				rgba(0,0,0,.8) 20%),
+				url("../img/fondo.jpg");
+}
+
+.contenedor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 60px auto;
+	width: 80%;
+	backdrop-filter: blur(10px);
+	background: #fff4;
+	border-radius: 20px;
+	box-shadow: #fffa 0px 0px 10px;
+	border-top: 2px solid rgba(255, 255, 255, 0.18);
+	border-left: 2px solid rgba(255, 255, 255, 0.18);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+	border-right: 2px solid rgba(0, 0, 0, 0.02);
+	overflow: hidden;
+}
+
+.contenedor h1 {
+	color: #fff;
+	font-size: 40px;
+	margin: 60px 0 20px 0;
+	text-shadow: #000 0px 0px 10px, #000 0px 0px 10px;
+}
+
+.formulario{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px 0;
+}
+
+.formulario input[type='text'], .formulario input[type='number'] {
+	padding: 20px;
+	border: none;
+	background: #fff;
+	width: 180%;
+	border-radius: 5px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+.formulario input[type='text']:focus, .formulario input[type='number']:focus {
+	outline: none;
+}
+
+.formulario input[type='text']::placeholder, .formulario input[type='number']::placeholder {
+	color: #ccc;
+	text-align: center;
+}
+
+/* eliminar flecha a input[type='number' */
+.formulario input[type='number']::-webkit-inner-spin-button,
+.formulario input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+.btn, a{
+	width: 80%;
+	border: none;
+	background: rgb(0, 0, 0);
+	color: #fff;
+	cursor: pointer;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
+	transition: background 0.3s linear;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background: #004dab;
+	color: #fff;
+}
+
+.btn:focus, a:focus{
+	outline: none;
+	background: #000;
+	color: #fff;
+}
+
+.descarga{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.descarga i{
+	font-size: 60px;
+	color: #fff;
+}
+
+.contenedorQR {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 0;
+	color: #fff;
+}
+
+.oculto{
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	padding: 0;
+}
+
+.visible{
+	visibility: visible;
+	opacity: 0;
+	padding: 40px 0px;
+	animation: aparecer 2s linear forwards;
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Pie de página */
+footer{
+background: url("../img/pie.png");
+background-size: cover;
+filter: drop-shadow(0px 9px 20px #fff);
+padding-top: 14%;
+}
+
+.pie{
+color:#fff;
+padding-left: 2%;
+margin-bottom: 0%;
+}
+
+.pie>h2{
+margin-top: 55px;
+}
+
+.img-yo{
+width: 90%;
+margin-top: 20px;
+margin-bottom: 80px;
+border-radius: 20% 0 20% 0;
+}
+
+.copy{
+color: rgba(255, 255, 255, 0.5);
+margin: 0;
+text-align: right;
+}
